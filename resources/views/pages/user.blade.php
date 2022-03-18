@@ -65,7 +65,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <h5 class="card-title">{{ $item->id }}</h5>
                         <p class="card-text">{{ $item->name }}
                         </p>
-                        <button type="button" class="btn btn-block btn-danger btn-sm">Request A</button>
+                        <a type="button" class="btn btn-block btn-danger btn-sm" href="{{ route('cart',$item->id) }}">Request
+                            A</a>
                         <button type="button" class="btn btn-block btn-primary btn-sm">Request B</button>
                     </div>
                 </div>

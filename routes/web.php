@@ -14,6 +14,8 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', [ProductController::class, 'index']);
+Route::get('/add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('cart');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

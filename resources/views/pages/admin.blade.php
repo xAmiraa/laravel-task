@@ -208,6 +208,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <h1>Hello from tem</h1>
+            <h1>{{ $Data['id'] }}</h1>
+            {{-- <h1>{{ $of['hello'] }}</h1> --}}
+
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

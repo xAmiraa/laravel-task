@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-
+use App\Events\CartEvent;
 class ProductController extends Controller
 {
     /**
@@ -82,5 +82,12 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+     public function addToCart($id)
+    {
+        $product= Product::find($id);
+        CartEvent::dispatch($product);
+    //    event(new CartEvent($product));
+      return view('pages.admin',['Data'=>$product]);
     }
 }
