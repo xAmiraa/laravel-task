@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+      $data=Product::all();
+        return view('pages.user',['Data'=>$data]);
     }
 
     /**

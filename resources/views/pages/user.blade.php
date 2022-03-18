@@ -59,15 +59,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <h1>Hello from user page</h1>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <button type="button" class="btn btn-block btn-danger btn-sm">Request A</button>
-                    <button type="button" class="btn btn-block btn-primary btn-sm">Request B</button>
+            @foreach ($Data as $item)
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $item->id }}</h5>
+                        <p class="card-text">{{ $item->name }}
+                        </p>
+                        <button type="button" class="btn btn-block btn-danger btn-sm">Request A</button>
+                        <button type="button" class="btn btn-block btn-primary btn-sm">Request B</button>
+                    </div>
                 </div>
-            </div>
-
+            @endforeach
 
             <!-- /.content -->
         </div>
